@@ -59,32 +59,15 @@ header{
   display: none;
 }
 
-.st-demo-header {
+.portfolio-header {
   background-color: #666666;
   color: white;
   font-size: 24px;
   padding: 8px 24px;
 }
 
-.st-demo-header button {
-  color: black;
-  font-size: 12px;
-}
-
-.st-demo-subheader {
-  background-color: #f0f0f0;
-  color: #333;
-  font-size: 16px;
-  height: 65px;
-  margin-top: 50px;
-  padding: 8px 24px;
-}
-
-.st-demo-subheader:first-child {
-  margin-top: 0;
-}
-
 .img-container{
+  margin-top: 5vh;
   display: grid;
   grid-template-areas: 
   "logo logo logo logo logo"
