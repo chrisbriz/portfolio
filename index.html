@@ -10,13 +10,18 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">        
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="jquery.scrolling-tabs.css">
         <link rel="stylesheet" href="css/bootstrap.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="js/bootstrap.js"></script>
+        <link rel="stylesheet" href="css/weatherStyle.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>        
         <script src="scripts/jquery.scrolling-tabs.js"></script>
         <script src="scripts/script.js" defer></script>
+        <script src="scripts/weatherScript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -30,10 +35,16 @@
             <li role="presentation" class="active"><a href="#tab1" role="tab" data-toggle="tab">About me</a></li>
             <li role="presentation"><a href="#tab2" role="tab" data-toggle="tab">What i can</a></li>
             <li role="presentation"><a href="#tab3" role="tab" data-toggle="tab">Calculator</a></li>
+            <li role="presentation"><a href="#tab4" role="tab" data-toggle="tab">Weather</a></li>
         </ul>
 
         <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="tab1">Content</div>
+            <div role="tabpanel" class="tab-pane active" id="tab1">
+                <div class="container">
+                    <p>Developer since 2018, my path has been a rocky one, going from .net projects to full backend all the way to database developer with oracle.</p>
+                    <p>My goal is to sharpen my frontend skills to become a good react developer.</p>
+                </div>
+            </div>
             <div role="tabpanel" class="tab-pane" id="tab2">
                 <section class="img-container">
                     <img src="media/HTML5-Logo.ico" alt="">
@@ -68,6 +79,25 @@
                     <button data-number>.</button>
                     <button data-number>0</button>
                     <button data-equals class="span-two">=</button>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tab4">
+                <div class="container">
+                    <div id="city-name-wrapper">
+                        <h2 class="text-center">Weather for:</h2>
+                        <h2 class="text-center" id="cityname"></h2>
+                      
+                        <div id="city-forecast">
+                          <p class="weather-descr col-xs-12"></p>
+                          <p class="temp col-xs-12"></p>
+                          <p class="pressure col-xs-12"></p>
+                          <p class="wind-spd col-xs-12"></p>
+                          <div id="altit"></div>
+                          <div id="latitude-val"></div>
+                      
+                          <!-- forecast  -->
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
